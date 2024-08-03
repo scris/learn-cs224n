@@ -16,11 +16,11 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 ### Jul 25, 2024
 
 - Watched [Lecture 1](https://www.youtube.com/watch?v=rmVRLeJRkl4).
-- Read the original [WordVec paper](./1-2-wordvec/23-1%20Word2vec%20Paper.pdf) and related materials.
+- Read the original [Word2Vec paper](./1-2-wordvec/23-1%20Word2vec%20Paper.pdf) and related materials.
 
 ### Jul 26, 2024
 
-- Read more materials to do with the WordVec paper, e.g. [this article](https://blog.csdn.net/v_JULY_v/article/details/102708459).
+- Read more materials to do with the Word2Vec paper, e.g. [this article](https://blog.csdn.net/v_JULY_v/article/details/102708459).
 - Did the first third of [Assignment 1](./1-2-wordvec/Assignment/exploring_word_vectors.ipynb).
 - Read related materials like [this article about SVD](https://www.cnblogs.com/prepared/p/14719788.html).
 - Watched the first half of [Lecture 2](https://www.youtube.com/watch?v=gqaHkPEZAew).
@@ -34,3 +34,12 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 ### Jul 28, 2024
 
 - Finished doing [Assignment 1](./1-2-wordvec/Assignment/exploring_word_vectors.ipynb).
+
+### Aug 2, 2024
+
+- Finished reading the original [GloVe paper](./1-2-wordvec/23-2%20GloVe%20Paper.pdf) and some relevant materials.
+
+### Aug 3, 2024 
+
+- Watched [Lecture 3](https://www.youtube.com/watch?v=X0Jw4kgaFlg&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=3).
+- Learned more and collected more materials on backpropagation.
