@@ -8,6 +8,8 @@ import glob
 import random
 import numpy as np
 import os.path as op
+import time
+
 
 def load_saved_params():
     """
@@ -17,7 +19,7 @@ def load_saved_params():
     st = 0
     for f in glob.glob("saved_params_*.npy"):
         iter = int(op.splitext(op.basename(f))[0].split("_")[2])
-        if (iter > st):
+        if iter > st:
             st = iter
 
     if st > 0:
@@ -38,9 +40,8 @@ def save_params(iter, params):
         pickle.dump(random.getstate(), f)
 
 
-def sgd(f, x0, step, iterations, postprocessing=None, useSaved=False,
-        PRINT_EVERY=10):
-    """ Stochastic Gradient Descent
+def sgd(f, x0, step, iterations, postprocessing=None, useSaved=False, PRINT_EVERY=10):
+    """Stochastic Gradient Descent
 
     Implement the stochastic gradient descent method in this function.
 
@@ -80,13 +81,15 @@ def sgd(f, x0, step, iterations, postprocessing=None, useSaved=False,
         postprocessing = lambda x: x
 
     exploss = None
+    startTime = time.time()
 
     for iter in range(start_iter + 1, iterations + 1):
         # You might want to print the progress every few iterations.
 
         loss = None
         ### YOUR CODE HERE (~2 lines)
-
+        loss, grad = f(x)
+        x -= step * grad
         ### END YOUR CODE
 
         x = postprocessing(x)
@@ -94,8 +97,8 @@ def sgd(f, x0, step, iterations, postprocessing=None, useSaved=False,
             if not exploss:
                 exploss = loss
             else:
-                exploss = .95 * exploss + .05 * loss
-            print("iter %d: %f" % (iter, exploss))
+                exploss = 0.95 * exploss + 0.05 * loss
+            print("iter %d: %f, %d" % (iter, exploss, time.time() - startTime))
 
         if iter % SAVE_PARAMS_EVERY == 0 and useSaved:
             save_params(iter, x)
@@ -107,7 +110,7 @@ def sgd(f, x0, step, iterations, postprocessing=None, useSaved=False,
 
 
 def sanity_check():
-    quad = lambda x: (np.sum(x ** 2), x * 2)
+    quad = lambda x: (np.sum(x**2), x * 2)
 
     print("Running sanity checks...")
     t1 = sgd(quad, 0.5, 0.01, 1000, PRINT_EVERY=100)

@@ -1,4 +1,11 @@
+# General
 .DS_Store
 __PYCACHE__/
 *.pyc
 .idea/
+
+# Datasets
+3-4-nn/Assignment/utils/datasets
+
+# Temp Files
+*.npy

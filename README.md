@@ -42,4 +42,28 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 ### Aug 3, 2024 
 
 - Watched [Lecture 3](https://www.youtube.com/watch?v=X0Jw4kgaFlg&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=3).
-- Learned more and collected more materials on backpropagation.
+- Learned more and collected more materials on lecture 3 related topics.
+
+### Aug 4, 2024
+
+- Did the written part of [Assignment 2](./3-4-nn/Assignment.pdf).
+- Read relative materials like [this article about backprop](./3-4-nn/Resources/Yes%20you%20should%20understand%20backprop.pdf).
+
+### Aug 5, 2024
+
+- Reviewed the [Python Tutorial](./3-4-nn/Resources/Python%20Tutorial.ipynb).
+- Did the coding part of [Assignment 2](./3-4-nn/Assignment.pdf).
+- Read relative materials like [this article about gradient](./3-4-nn/Resources/Gradient%20Notes.pdf).
+
+### Aug 6, 2024
+
+- Read relevent materials like [this article about NN](https://cs231n.github.io/neural-networks-1/).
+
+### Aug 7, 2024
+
+- Watched [Lecture 5](https://www.youtube.com/watch?v=PLryWeHPcBs&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=5) and [Lecture 6](https://www.youtube.com/watch?v=PLryWeHPcBs&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=6).
+- Read relevant materials like [this article about RNN](https://karpathy.github.io/2015/05/21/rnn-effectiveness/).
+
+### Inbox
+
+- To learn thoroughly about matrix derivation and dig deeper on A2 Written.
