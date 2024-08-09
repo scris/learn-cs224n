@@ -55,15 +55,21 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 - Did the coding part of [Assignment 2](./3-4-nn/Assignment.pdf).
 - Read relative materials like [this article about gradient](./3-4-nn/Resources/Gradient%20Notes.pdf).
 
-### Aug 6, 2024
-
-- Read relevent materials like [this article about NN](https://cs231n.github.io/neural-networks-1/).
-
 ### Aug 7, 2024
 
-- Watched [Lecture 5](https://www.youtube.com/watch?v=PLryWeHPcBs&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=5) and [Lecture 6](https://www.youtube.com/watch?v=PLryWeHPcBs&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=6).
-- Read relevant materials like [this article about RNN](https://karpathy.github.io/2015/05/21/rnn-effectiveness/).
+- Watched [Lecture 5](https://www.youtube.com/watch?v=PLryWeHPcBs&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=5) and half of [Lecture 6](https://www.youtube.com/watch?v=PLryWeHPcBs&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=6).
+
+### Aug 9, 2024
+
+- Finished watching [Lecture 6](https://www.youtube.com/watch?v=PLryWeHPcBs&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=6).
+- Read relevant materials like [this article about NN](https://cs231n.github.io/neural-networks-1), and [this chapter about n-gram](./5-6-rnn/23-5%20N-gram%20Chapter.pdf).
+
+### Aug 10, 2024
+
+- Watched [Lecture 7](https://www.youtube.com/watch?v=wzfWHP6SXxY&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=7).
+- Started doing [Assignment 4](./5-6-rnn/Assignment%204.pdf).
 
 ### Inbox
 
 - To learn thoroughly about matrix derivation and dig deeper on A2 Written.
+- To read relevant materials like [this article about RNN](https://karpathy.github.io/2015/05/21/rnn-effectiveness/).

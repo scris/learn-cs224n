@@ -6,6 +6,7 @@ __PYCACHE__/
 
 # Datasets
 3-4-nn/Assignment/utils/datasets
+5-6-rnn/Assignment/zh_en_data
 
 # Temp Files
 *.npy
