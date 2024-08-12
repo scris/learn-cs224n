@@ -2,7 +2,9 @@
 
 This is the place where I store things involved in my journey learning CS224N (Winter 2023) in the summer of 2024. 
 
-The majority of the recorded resources are in English. However, some of the resources might be in  Chinese.
+The majority of the recorded resources are in English. However, some of the resources might be in Chinese.
+
+Assignments may not be directly runnable. Before running them, please download 2023 code for datasets parts with reference of .gitignore file.
 
 ## Learning Record
 
@@ -67,9 +69,17 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 ### Aug 10, 2024
 
 - Watched [Lecture 7](https://www.youtube.com/watch?v=wzfWHP6SXxY&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=7).
-- Started doing [Assignment 4](./5-6-rnn/Assignment%204.pdf).
+- Did some preliminary work on [Assignment 4](./5-6-rnn/Assignment%204.pdf).
+
+### Aug 12, 2024
+
+- Did the first half of [Assignment 4](./5-6-rnn/Assignment%204.pdf).
+
+### Aug 13, 2024
+
+- Finished doing [Assignment 4](./5-6-rnn/Assignment%204.pdf).
+- Read relevant materials like [this article about RNN](https://karpathy.github.io/2015/05/21/rnn-effectiveness/).
 
 ### Inbox
 
 - To learn thoroughly about matrix derivation and dig deeper on A2 Written.
-- To read relevant materials like [this article about RNN](https://karpathy.github.io/2015/05/21/rnn-effectiveness/).

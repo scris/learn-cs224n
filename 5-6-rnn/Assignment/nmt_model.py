@@ -70,7 +70,17 @@ class NMT(nn.Module):
         ###     self.combined_output_projection (Linear Layer with no bias), called W_{u} in the PDF.
         ###     self.target_vocab_projection (Linear Layer with no bias), called W_{vocab} in the PDF.
         ###     self.dropout (Dropout Layer)
-        ###
+
+        self.post_embed_cnn = nn.Conv1d(embed_size, embed_size, 2, padding='same')
+        self.encoder = nn.LSTM(embed_size, hidden_size, bidirectional=True, bias=True)
+        self.decoder = nn.LSTMCell(embed_size, hidden_size, bias=True)
+        self.h_projection = nn.Linear(hidden_size * 2, hidden_size, bias=False)
+        self.c_projection = nn.Linear(hidden_size * 2, hidden_size, bias=False)
+        self.att_projection = nn.Linear(hidden_size * 2, hidden_size, bias=False)
+        self.combined_output_projection = nn.Linear(hidden_size * 3, hidden_size, bias=False)
+        self.target_vocab_projection = nn.Linear(hidden_size, hidden_size, bias=False)
+        self.dropout = nn.Dropout(p=dropout_rate)
+
         ### Use the following docs to properly initialize these variables:
         ###     LSTM:
         ###         https://pytorch.org/docs/stable/nn.html#torch.nn.LSTM
@@ -166,7 +176,23 @@ class NMT(nn.Module):
         ###             Concatenate the forwards and backwards tensors to obtain a tensor shape (b, 2*h).
         ###             Apply the c_projection layer to this in order to compute init_decoder_cell.
         ###             This is c_0^{dec} in the PDF. Here b = batch size, h = hidden size
-        ###
+
+        x = self.model_embeddings.source(source_padded)
+        x_permuted = x.permute(1, 2, 0)
+        x_permuted_cnn = self.post_embed_cnn(x_permuted)
+        x = x_permuted_cnn.permute(2, 0, 1)
+
+        x = nn.utils.rnn.pack_padded_sequence(x, torch.tensor(source_lengths), enforce_sorted=False)
+        packed_output, (last_hidden, last_cell) = self.encoder(x)
+        enc_hiddens_not_permuted, _ = nn.utils.rnn.pad_packed_sequence(packed_output)
+        enc_hiddens = enc_hiddens_not_permuted.permute(1, 0, 2)
+
+        init_decoder_hidden = torch.cat((last_hidden[0, :, :], last_hidden[1, :, :]), dim=1)
+        init_decoder_hidden = self.h_projection(init_decoder_hidden)
+        init_decoder_cell = torch.cat((last_cell[0, :, :], last_cell[1, :, :]), dim=1)
+        init_decoder_cell = self.c_projection(init_decoder_cell)
+        dec_init_state = (init_decoder_hidden, init_decoder_cell)
+
         ### See the following docs, as you may need to use some of the following functions in your implementation:
         ###     Pack the padded sequence X before passing to the encoder:
         ###         https://pytorch.org/docs/stable/generated/torch.nn.utils.rnn.pack_padded_sequence.html
@@ -231,7 +257,9 @@ class NMT(nn.Module):
         ###     4. Use torch.stack to convert combined_outputs from a list length tgt_len of
         ###         tensors shape (b, h), to a single tensor shape (tgt_len, b, h)
         ###         where tgt_len = maximum target sentence length, b = batch size, h = hidden size.
-        ###
+
+        ### TODO Start at this place
+
         ### Note:
         ###    - When using the squeeze() function make sure to specify the dimension you want to squeeze
         ###      over. Otherwise, you will remove the batch dimension accidentally, if batch_size = 1.
