@@ -17,15 +17,15 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 
 ### Jul 25, 2024
 
-- Watched [Lecture 1](https://www.youtube.com/watch?v=rmVRLeJRkl4).
+- Watched [Lecture 1](https://www.youtube.com/watch?v=rmVRLeJRkl4) (Introduction).
 - Read the original [Word2Vec paper](./1-2-wordvec/23-1%20Word2vec%20Paper.pdf) and related materials.
 
 ### Jul 26, 2024
 
 - Read more materials to do with the Word2Vec paper, e.g. [this article](https://blog.csdn.net/v_JULY_v/article/details/102708459).
-- Did the first third of [Assignment 1](./1-2-wordvec/Assignment/exploring_word_vectors.ipynb).
+- Did the first third of [Assignment 1](./1-2-wordvec/Assignment/exploring_word_vectors.ipynb) (Word Vector).
 - Read related materials like [this article about SVD](https://www.cnblogs.com/prepared/p/14719788.html).
-- Watched the first half of [Lecture 2](https://www.youtube.com/watch?v=gqaHkPEZAew).
+- Watched the first half of [Lecture 2](https://www.youtube.com/watch?v=gqaHkPEZAew) (Word Vector).
 
 ### Jul 27, 2024
 
@@ -43,12 +43,12 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 
 ### Aug 3, 2024 
 
-- Watched [Lecture 3](https://www.youtube.com/watch?v=X0Jw4kgaFlg&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=3).
+- Watched [Lecture 3](https://www.youtube.com/watch?v=X0Jw4kgaFlg&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=3) (Neural Network).
 - Learned more and collected more materials on lecture 3 related topics.
 
 ### Aug 4, 2024
 
-- Did the written part of [Assignment 2](./3-4-nn/Assignment.pdf).
+- Did the written part of [Assignment 2](./3-4-nn/Assignment.pdf) (Word2Vec and Math).
 - Read relative materials like [this article about backprop](./3-4-nn/Resources/Yes%20you%20should%20understand%20backprop.pdf).
 
 ### Aug 5, 2024
@@ -59,7 +59,7 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 
 ### Aug 7, 2024
 
-- Watched [Lecture 5](https://www.youtube.com/watch?v=PLryWeHPcBs&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=5) and half of [Lecture 6](https://www.youtube.com/watch?v=PLryWeHPcBs&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=6).
+- Watched [Lecture 5](https://www.youtube.com/watch?v=PLryWeHPcBs&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=5) (RNN) and half of [Lecture 6](https://www.youtube.com/watch?v=PLryWeHPcBs&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=6) (LSTM).
 
 ### Aug 9, 2024
 
@@ -68,14 +68,14 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 
 ### Aug 10, 2024
 
-- Watched [Lecture 7](https://www.youtube.com/watch?v=wzfWHP6SXxY&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=7).
-- Did some preliminary work on [Assignment 4](./5-6-rnn/Assignment%204.pdf).
+- Watched [Lecture 7](https://www.youtube.com/watch?v=wzfWHP6SXxY&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=7) (NMT and Seq2Seq).
+- Did some preliminary work on [Assignment 4](./5-6-rnn/Assignment%204.pdf) (RNN NMT).
 
 ### Aug 12, 2024
 
 - Did the first half of [Assignment 4](./5-6-rnn/Assignment%204.pdf).
 
-### Aug 13, 2024
+### Aug 14, 2024
 
 - Finished doing [Assignment 4](./5-6-rnn/Assignment%204.pdf).
 - Read relevant materials like [this article about RNN](https://karpathy.github.io/2015/05/21/rnn-effectiveness/).

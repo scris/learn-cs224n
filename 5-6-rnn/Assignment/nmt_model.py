@@ -73,12 +73,12 @@ class NMT(nn.Module):
 
         self.post_embed_cnn = nn.Conv1d(embed_size, embed_size, 2, padding='same')
         self.encoder = nn.LSTM(embed_size, hidden_size, bidirectional=True, bias=True)
-        self.decoder = nn.LSTMCell(embed_size, hidden_size, bias=True)
+        self.decoder = nn.LSTMCell(embed_size + hidden_size, hidden_size, bias=True)
         self.h_projection = nn.Linear(hidden_size * 2, hidden_size, bias=False)
         self.c_projection = nn.Linear(hidden_size * 2, hidden_size, bias=False)
         self.att_projection = nn.Linear(hidden_size * 2, hidden_size, bias=False)
         self.combined_output_projection = nn.Linear(hidden_size * 3, hidden_size, bias=False)
-        self.target_vocab_projection = nn.Linear(hidden_size, hidden_size, bias=False)
+        self.target_vocab_projection = nn.Linear(hidden_size, len(self.vocab.tgt), bias=False)
         self.dropout = nn.Dropout(p=dropout_rate)
 
         ### Use the following docs to properly initialize these variables:
@@ -258,7 +258,15 @@ class NMT(nn.Module):
         ###         tensors shape (b, h), to a single tensor shape (tgt_len, b, h)
         ###         where tgt_len = maximum target sentence length, b = batch size, h = hidden size.
 
-        ### TODO Start at this place
+        enc_hiddens_proj = self.att_projection(enc_hiddens)
+        y = self.model_embeddings.target(target_padded)
+        for y_t_to_squeeze in torch.split(y, 1):
+            y_t = torch.squeeze(y_t_to_squeeze)
+            ybar_t = torch.cat((o_prev, y_t), 1)
+            dec_state_new, combined_outputs_new, e_t_new = self.step(ybar_t, dec_state, enc_hiddens, enc_hiddens_proj, enc_masks)
+            combined_outputs.append(combined_outputs_new)
+            o_prev = combined_outputs_new
+        combined_outputs = torch.stack(combined_outputs)
 
         ### Note:
         ###    - When using the squeeze() function make sure to specify the dimension you want to squeeze
@@ -317,7 +325,13 @@ class NMT(nn.Module):
         ###     2. Split dec_state into its two parts (dec_hidden, dec_cell)
         ###     3. Compute the attention scores e_t, a Tensor shape (b, src_len).
         ###        Note: b = batch_size, src_len = maximum source length, h = hidden size.
-        ###
+
+        dec_state = self.decoder(Ybar_t, dec_state)
+        dec_hidden, dec_cell = dec_state
+        dec_hidden_unsqueezed = torch.unsqueeze(dec_hidden, 1)
+        enc_hiddens_proj_permuted = torch.permute(enc_hiddens_proj, (0, 2, 1))
+        e_t = torch.squeeze(torch.bmm(dec_hidden_unsqueezed, enc_hiddens_proj_permuted), dim=1)
+
         ###       Hints:
         ###         - dec_hidden is shape (b, h) and corresponds to h^dec_t in the PDF (batched)
         ###         - enc_hiddens_proj is shape (b, src_len, h) and corresponds to W_{attProj} h^enc (batched).
@@ -346,6 +360,13 @@ class NMT(nn.Module):
         ###     1. Apply softmax to e_t to yield alpha_t
         ###     2. Use batched matrix multiplication between alpha_t and enc_hiddens to obtain the
         ###         attention output vector, a_t.
+
+        alpha_t = torch.nn.functional.softmax(e_t, dim=1)
+        a_t = torch.squeeze(torch.bmm(torch.unsqueeze(alpha_t, 1), enc_hiddens), dim=1)
+        u_t = torch.cat((a_t, dec_hidden), dim=1)
+        v_t = self.combined_output_projection(u_t)
+        O_t = self.dropout(torch.tanh(v_t))
+
         # $$     Hints:
         ###           - alpha_t is shape (b, src_len)
         ###           - enc_hiddens is shape (b, src_len, 2h)
