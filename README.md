@@ -79,7 +79,17 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 
 - Finished doing [Assignment 4](./5-6-rnn/Assignment%204.pdf).
 - Read relevant materials like [this article about RNN](https://karpathy.github.io/2015/05/21/rnn-effectiveness/).
+- Read the original paper of [BLEU](https://aclanthology.org/P02-1040.pdf).
+
+### Aug 16, 2024
+
+- Watched [Lecture 8](https://www.youtube.com/watch?v=LWMzyfvuehA&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=8) (Transformer).
+- Read the original paper of [Transformer](https://arxiv.org/abs/1706.03762), 
+- Read relevant materials like [this post about Attention](https://distill.pub/2016/augmented-rnns/), [this](https://jalammar.github.io/illustrated-transformer/) and [this article about Transformer](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/).
+- Improved the result of [Assignment 4](./5-6-rnn/Assignment%204.pdf).
 
 ### Inbox
 
 - To learn thoroughly about matrix derivation and dig deeper on A2 Written.
+- To read this paper about [Seq2seq speech recognition](https://arxiv.org/pdf/1211.3711.pdf) and [this](https://arxiv.org/pdf/1508.01211), and this about [Music Transformer](https://arxiv.org/pdf/1809.04281).
+- To read this paper about [Neural Programmer](https://arxiv.org/pdf/1511.04834).

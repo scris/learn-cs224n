@@ -9,6 +9,8 @@ if "%1%"=="train" (
     set CUDA_VISIBLE_DEVICES=0 & python run.py decode model.bin ./zh_en_data/test.zh ./zh_en_data/test.en outputs/test_outputs.txt --cuda
 ) else if "%1%"=="train_local" (
     python run.py train --train-src=./zh_en_data/train.zh --train-tgt=./zh_en_data/train.en --dev-src=./zh_en_data/dev.zh --dev-tgt=./zh_en_data/dev.en --vocab=vocab.json --lr=5e-5
+) else if "%1%"=="train_local_cuda" (
+    set CUDA_VISIBLE_DEVICES=0 & python run.py train --train-src=./zh_en_data/train.zh --train-tgt=./zh_en_data/train.en --dev-src=./zh_en_data/dev.zh --dev-tgt=./zh_en_data/dev.en --vocab=vocab.json --cuda --lr=5e-5
 ) else if "%1%"=="test_local" (
     python run.py decode model.bin ./zh_en_data/test.zh ./zh_en_data/test.en outputs/test_outputs.txt
 ) else if "%1%"=="train_debug" (
