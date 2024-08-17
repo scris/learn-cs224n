@@ -85,11 +85,21 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 
 - Watched [Lecture 8](https://www.youtube.com/watch?v=LWMzyfvuehA&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=8) (Transformer).
 - Read the original paper of [Transformer](https://arxiv.org/abs/1706.03762), 
-- Read relevant materials like [this post about Attention](https://distill.pub/2016/augmented-rnns/), [this](https://jalammar.github.io/illustrated-transformer/) and [this article about Transformer](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/).
+- Read relevant materials like [this publication about Attention](https://distill.pub/2016/augmented-rnns/).
 - Improved the result of [Assignment 4](./5-6-rnn/Assignment%204.pdf).
+
+### Aug 17, 2024
+
+- Read articles like [this](https://jalammar.github.io/illustrated-transformer/) and [this about Transformer](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/).
+- Read some papers like [this](https://arxiv.org/pdf/1508.01211) and this about [Music Transformer](https://arxiv.org/pdf/1809.04281), this about [Image Transformer](https://arxiv.org/pdf/1802.05751).
+
+### Aug 18, 2024
+
+- Did the first half of [Assignment 5](./8-transformer/Assignment.pdf) (Attention).
+- Watched [Lecture 9](https://www.youtube.com/watch?v=DGfCRXuNA2w&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=9) (Pretraining).
 
 ### Inbox
 
 - To learn thoroughly about matrix derivation and dig deeper on A2 Written.
-- To read this paper about [Seq2seq speech recognition](https://arxiv.org/pdf/1211.3711.pdf) and [this](https://arxiv.org/pdf/1508.01211), and this about [Music Transformer](https://arxiv.org/pdf/1809.04281).
-- To read this paper about [Neural Programmer](https://arxiv.org/pdf/1511.04834).
+- To read this paper about [Seq2seq speech recognition](https://arxiv.org/pdf/1211.3711.pdf), this paper about [Human Feedback](https://arxiv.org/abs/2009.01325).
+- To read this article about [BERT](https://jalammar.github.io/illustrated-bert/) and this about [Neural Programmer](https://arxiv.org/pdf/1511.04834).
