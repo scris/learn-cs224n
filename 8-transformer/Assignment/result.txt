@@ -1,0 +1,5 @@
+Result without Pretrain
+Correct: 7.0 out of 500.0: 1.4%
+
+London Baseline
+Correct: 25.0 out of 500.0: 5.0%
