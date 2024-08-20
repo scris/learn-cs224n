@@ -112,7 +112,6 @@ if __name__ == '__main__':
         # final_tokens=200*len(pretrain_dataset)*block_size
         # num_workers=4
         # writer=writer
-        raise NotImplementedError
     elif args.function == 'finetune':
         assert args.writing_params_path is not None
         assert args.finetune_corpus_path is not None

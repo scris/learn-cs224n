@@ -3,3 +3,6 @@ Correct: 7.0 out of 500.0: 1.4%
 
 London Baseline
 Correct: 25.0 out of 500.0: 5.0%
+
+Pretrain and Finetune Result
+Correct: 80.0 out of 500.0: 16.0%

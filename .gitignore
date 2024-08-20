@@ -8,8 +8,12 @@ __PYCACHE__/
 3-4-nn/Assignment/utils/datasets
 5-6-rnn/Assignment/zh_en_data
 5-6-rnn/Assignment/vocab.json
-5-6-rnn/Assignment/*.bin*
 8-transformer/Assignment/mingpt-demo/input.txt
+
+# Model Files
+5-6-rnn/Assignment/*.bin
+5-6-rnn/Assignment/*.bin.optim
+8-transformer/Assignment/*.params
 
 # Temp Files
 *.npy
