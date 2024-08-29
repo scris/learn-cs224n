@@ -95,12 +95,12 @@ The scheduled learning agenda is based on [the official schedule](https://web.st
 
 ### Aug 18, 2024
 
-- Did the first half of [Assignment 5](./8-transformer/Assignment.pdf) (Attention).
+- Did the first half of [Assignment 5](./7-9-transformer/Assignment.pdf) (Attention).
 - Watched the first half of [Lecture 9](https://www.youtube.com/watch?v=DGfCRXuNA2w&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=9) (Pretraining).
 
 ### Aug 19, 2024
 
-- Did the second half of [Assignment 5](./8-transformer/Assignment.pdf) (Pretraining).
+- Did the second half of [Assignment 5](./7-9-transformer/Assignment.pdf) (Pretraining).
 - Finished watching [Lecture 9](https://www.youtube.com/watch?v=DGfCRXuNA2w&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=9) (Pretraining).
 
 ### Aug 20, 2024
